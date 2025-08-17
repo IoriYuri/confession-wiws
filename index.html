@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="star-field" id="starField"></div>
+    
+    <div class="container">
+        <div class="step active" id="step1">
+            <h1>Hi Beautiful! ✨</h1>
+            <p>Someone special has created a little puzzle just for you...</p>
+            <p>Are you ready to discover a heartfelt message?</p>
+            <button class="btn" onclick="nextStep(2)">Yes, I'm ready! 💕</button>
+        </div>
+
+        <div class="step" id="step2">
+            <h2>First Puzzle 🧩</h2>
+            <p>What's the answer to this simple equation?</p>
+            <p style="font-size: 1.5em; margin: 20px 0;">💕 + 💕 = ?</p>
+            <p style="font-size: 1em; color: #f0f0f0;">(Hint: Two hearts together make...)</p>
+            <input type="text" class="puzzle-input" id="mathAnswer" placeholder="Your answer">
+            <br>
+            <button class="btn" onclick="checkMath()">Submit Answer</button>
+            <div id="mathFeedback"></div>
+        </div>
+
+        <div class="step" id="step3">
+            <h2>Second Puzzle 🌟</h2>
+            <p>Arrange these words in the right order to reveal a compliment:</p>
+            <div class="word-puzzle" id="wordPuzzle">
+                <div class="word-box" data-word="amazing">amazing</div>
+                <div class="word-box" data-word="absolutely">absolutely</div>
+                <div class="word-box" data-word="are">are</div>
+                <div class="word-box" data-word="you">you</div>
+            </div>
+            <p style="font-size: 1em; margin-top: 20px;">Click the words in the correct order!</p>
+            <div id="selectedWords" style="margin: 20px 0; font-size: 1.3em; color: #90EE90;"></div>
+            <button class="btn" onclick="resetWords()" style="display: none;" id="resetBtn">Reset</button>
+            <div id="wordFeedback"></div>
+        </div>
+
+        <div class="step" id="step4">
+            <h2>Final Puzzle 🎨</h2>
+            <p>What color represents love and passion?</p>
+            <p style="font-size: 1em; color: #f0f0f0;">(The color of roses and hearts...)</p>
+            <input type="text" class="puzzle-input" id="colorAnswer" placeholder="Enter color">
+            <br>
+            <button class="btn" onclick="checkColor()">Submit Answer</button>
+            <div id="colorFeedback"></div>
+        </div>
+
+        <div class="step" id="step5">
+            <h1>The Message Revealed! 💖</h1>
+            <div class="message-reveal">
+                <div class="hearts">💕 💖 💕</div>
+                <h2 style="color: #ffb3d9;">Hi gorgeous!</h2>
+                <p style="font-size: 1.3em; margin: 20px 0;">You are absolutely amazing, and I wanted you to know...</p>
+                <p style="font-size: 1.4em; color: #ffcce5; font-weight: bold;">I like you! 💕</p>
+                <p style="font-size: 1.2em; margin: 20px 0;">I hope that I have a chance to know you better.</p>
+                <p style="font-size: 1.1em; color: #f0f0f0;">You brighten every day just by being yourself. 🌟</p>
+                <div class="hearts">🌹 💖 🌹</div>
+            </div>
+            <button class="btn" onclick="restartPuzzle()">Start Over 🔄</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
